@@ -1,0 +1,55 @@
+\documentclass[]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{csquotes}
+\usepackage[portuguese]{babel}
+
+\newgeometry{
+    top=0.75in,
+    bottom=0.75in,
+    outer=1.5in,
+    inner=1.5in,
+}
+
+
+\title{
+    \includegraphics{images/isep.jpg} \\
+    \vfill
+    \LARGE\bfseries Relatório de "Gestão"\\
+    "Replai"
+    \vfill
+    
+    }
+\author{
+    \large\bfseries Turma 3DJ \textunderscore\space Grupo B \\
+    1210824 \textunderscore\space Paulo Norton \\
+    1210822 \textunderscore\space Nuno Barbosa \\
+    1201239 \textunderscore\space Francisco Queiroz \\
+    1200720 \textunderscore\space Manuela Leite\\
+    }
+\date{\today}
+
+
+
+
+
+\begin{document}
+    
+\maketitle
+
+\tableofcontents
+
+\include{chapters/introducao_e_estrutura_do_trabalho.tex}
+\include{chapters/desenvolvimento.tex}
+\include{chapters/conclusao.tex}
+\appendix
+\include{chapters/referencias.tex}
+\include{chapters/anexos.tex}
+
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}
