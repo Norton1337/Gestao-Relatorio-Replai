@@ -1,10 +1,50 @@
 \documentclass[]{report}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{aeguill}
+\usepackage[portuges]{babel}
+\usepackage{graphicx, wrapfig}
 \usepackage{float}
 \usepackage{geometry}
 \usepackage{csquotes}
-\usepackage[portuguese]{babel}
+\usepackage{url}
+\usepackage{indentfirst}
+\usepackage{tocbibind}
+\usepackage[toc]{glossaries}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+
+\definecolor{NavyBlue}{RGB}{32,42,150}
+
+
+\makeglossaries
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyBlue,
+    citecolor=NavyBlue,  
+    filecolor=NavyBlue,
+    urlcolor=cyan,
+    pdftitle={Replai Relatório}
+}
+
+
+\newglossaryentry{latex}
+{
+    name=latex,
+    description={Is a markup language specially suited 
+    for scientific documents}
+}
+
+\newglossaryentry{maths}
+{
+    name=mathematics,
+    description={Mathematics is what mathematicians do}
+}
+ 
+
 
 \newgeometry{
     top=0.75in,
@@ -17,8 +57,13 @@
 \title{
     \includegraphics{images/isep.jpg} \\
     \vfill
-    \LARGE\bfseries Relatório de "Gestão"\\
-    "Replai"
+    \LARGE\bfseries Relatório de Gestão\\
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{images/logo-black.jpg}
+    \label{fig:replaiLogo}
+\end{figure}
+
     \vfill
     
     }
@@ -31,25 +76,28 @@
     }
 \date{\today}
 
-
-
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 
 \begin{document}
-    
+
 \maketitle
+
 
 \tableofcontents
 
-\include{chapters/introducao_e_estrutura_do_trabalho.tex}
-\include{chapters/desenvolvimento.tex}
-\include{chapters/conclusao.tex}
+\include{chapters/introducao_e_estrutura_do_trabalho}
+\include{chapters/desenvolvimento}
+%\include{chapters/conclusao}
 \appendix
-\include{chapters/referencias.tex}
-\include{chapters/anexos.tex}
-
-
 \bibliographystyle{plain}
-\bibliography{ref}
+\bibliography{ref.bib}
+%\include{chapters/anexos}
+\listoffigures
+
+
+\hypertarget{glossary}{\printglossaries}
+
 
 \end{document}
