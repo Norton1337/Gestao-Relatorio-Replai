@@ -1,7 +1,7 @@
 \documentclass[]{report}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{aeguill}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage[portuges]{babel}
 \usepackage{graphicx, wrapfig}
 \usepackage{float}
@@ -13,6 +13,9 @@
 \usepackage[toc]{glossaries}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{amsmath}
+
+
 
 
 \definecolor{NavyBlue}{RGB}{32,42,150}
@@ -62,7 +65,7 @@
     \centering
     \includegraphics[width=10cm]{images/logo-black.jpg}
     \label{fig:replaiLogo}
-\end{figure}
+    \end{figure}
 
     \vfill
     
@@ -89,7 +92,7 @@
 
 \include{chapters/introducao_e_estrutura_do_trabalho}
 \include{chapters/desenvolvimento}
-%\include{chapters/conclusao}
+\include{chapters/conclusao}
 \appendix
 \bibliographystyle{plain}
 \bibliography{ref.bib}
